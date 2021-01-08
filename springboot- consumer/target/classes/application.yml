@@ -1,0 +1,29 @@
+server:
+  port: 80
+
+dubbo:
+  application:
+    name: consumer
+  registry:
+    address: zookeeper://47.92.101.91:2181
+  #    端口号
+  protocol:
+    port: 20881
+spring:
+  data:
+    solr:
+#      solr地址
+      host: http://47.92.101.91:8088/solr
+#      是否当存储器存储
+      repositories:
+        enabled: true
+  activemq:
+    broker-url: tcp://47.92.101.91:61616
+#    是否是内存模式，默认为true.
+    in-memory: false
+    pool:
+      enabled: false
+      max-connections: 10
+      idle-timeout: 30s
+
+

@@ -1,0 +1,39 @@
+dubbo:
+#  注册名字
+  application:
+    name: userSerice
+#    zookeeper地址
+  registry:
+    address: zookeeper://47.92.101.91:2181
+#    端口号
+  protocol:
+    port: 20881
+
+mybatis:
+  #  xml位置
+  mapper-locations: classpath:mapper/*.xml
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://47.92.101.91:3306/stu?&useSSL=false&characterEncoding=UTF-8
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+  data:
+    solr:
+      #      solr地址
+      host: http://47.92.101.91:8088/solr
+      #      是否当存储器存储
+      repositories:
+        enabled: true
+  activemq:
+    broker-url: tcp://47.92.101.91:61616
+    #    是否是内存模式，默认为true.
+    in-memory: false
+    pool:
+      enabled: false
+      max-connections: 10
+      idle-timeout: 30s

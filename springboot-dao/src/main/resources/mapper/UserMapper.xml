@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aa.dao.UserDao">
+
+
+<!--    /**-->
+<!--    * 查询user表所有记录-->
+<!--    *-->
+<!--    * @return-->
+<!--    */-->
+<!--    List<User> queryUserAll();-->
+
+    <select id="queryUserAll" resultType="com.aa.entity.User">
+        select * from user
+    </select>
+
+
+<!--    /**-->
+<!--    * 根据id查询user表中一条记录-->
+<!--    *-->
+<!--    * @param id id字段-->
+<!--    * @return-->
+<!--    */-->
+<!--    List<User> queryUserOneById(String id);-->
+
+    <select id="queryUserOneById" parameterType="string" resultType="com.aa.entity.User">
+        select * from user where id = #{id}
+    </select>
+
+<!--    /**-->
+<!--    * 根据id修改user表中一条记录-->
+<!--    *-->
+<!--    * @param user 实体类-->
+<!--    * @return-->
+<!--    */-->
+<!--    int updateUserById(User user);-->
+
+    <update id="updateUserById" parameterType="com.aa.entity.User">
+        update user set name = #{name}, age = #{age} where id = #{id}
+    </update>
+
+<!--    /**-->
+<!--    * 向user表中添加一条记录-->
+<!--    *-->
+<!--    * @param user-->
+<!--    * @return-->
+<!--    */-->
+<!--    int insertUser(User user);-->
+    <insert id="insertUser" parameterType="com.aa.entity.User">
+        insert  into user (id, name, age) value (#{id}, #{name}, #{age})
+    </insert>
+<!--    /**-->
+<!--    * 删除user中所有记录-->
+<!--    *-->
+<!--    * @return-->
+<!--    */-->
+<!--    int deleteUserAll();-->
+
+    <delete id="deleteUserAll" >
+        delete from user
+    </delete>
+
+<!--    /**-->
+<!--    * 根据id删除user表中一条记录-->
+<!--    *-->
+<!--    * @param id-->
+<!--    * @return-->
+<!--    */-->
+<!--    int deleteUserOneById(String id);-->
+
+    <delete id="deleteUserOneById" parameterType="string">
+        delete from user where id = #{id}
+    </delete>
+
+</mapper>
+
+
+
+
+
+
+
+
