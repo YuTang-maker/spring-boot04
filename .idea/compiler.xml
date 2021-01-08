@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springboot-service" />
         <module name="springboot-entity" />
         <module name="springboot-service-impl" />
-        <module name="springboot- consumer" />
         <module name="springboot-dao" />
-        <module name="springboot-service" />
+        <module name="springboot- consumer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

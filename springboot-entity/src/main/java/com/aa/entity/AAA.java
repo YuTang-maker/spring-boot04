@@ -5,4 +5,8 @@ package com.aa.entity;
  * @create: 2021-01-08 19:01
  */
 public class AAA {
+	/**
+	 * aaaaaaaaaaaaaa
+	 * bbbbbbbbbbbbbb
+	 */
 }
